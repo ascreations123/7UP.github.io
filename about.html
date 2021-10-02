@@ -7,6 +7,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        #gallery img:hover {
+            transform: scale(1.2, 1.2);
+            transition: .3s ease;
+            border: 2px solid rgb(230, 107, 107);
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+            position: relative;
+            float: left;
+            width: 25%;
+            padding: 10px;
+        }
+
+        .inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card:hover .inner {
+            transform: rotateY(180deg);
+        }
+
+        .front,
+        .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .back {
+            background-color: rgb(143, 129, 129);
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .teamrow:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .flip-card a {
+            color: black;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        #last {
+            color: white;
+        }
+    </style>
 </head>
 
 <body style="background-color: rgb(96, 133, 243);">
@@ -71,6 +139,130 @@
                         class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Learn
                         More</button>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap">
+            <div class="flex w-full mb-20 flex-wrap">
+                <h1 style="font-family: Algerian; color: white; margin-left: 38%; font-size: 55px;"
+                    class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">GALLERY</h1>
+            </div>
+            <div class="flex flex-wrap md:-m-2 -m-1">
+                <div class="flex flex-wrap w-1/2">
+                    <div class="md:p-2 p-1 w-1/2">
+                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="ATL.jpg">
+                    </div>
+                    <div class="md:p-2 p-1 w-1/2">
+                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="ATL3.jpg">
+                    </div>
+                    <div class="md:p-2 p-1 w-full">
+                        <img alt="gallery" class="w-full h-full object-cover object-center block" src="ATL2.jpg">
+                    </div>
+                </div>
+                <div class="flex flex-wrap w-1/2">
+                    <div class="md:p-2 p-1 w-full">
+                        <img alt="gallery" class="w-full h-full object-cover object-center block" src="ATL1.jpg">
+                    </div>
+                    <div class="md:p-2 p-1 w-1/2">
+                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="ATL4.jpg">
+                    </div>
+                    <div class="md:p-2 p-1 w-1/2">
+                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="ATL5.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="align-items: center; margin-top: 5%;" id="gallery" class="text-gray-600 body-font">
+        <div class="flex w-full mb-20 flex-wrap">
+            <h1 style="font-family: Algerian; color: white; margin-left: 36%; font-size: 55px;"
+                class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">OUR FACULTIES
+            </h1>
+        </div>
+        <div style="margin-left: 12%;" class="card">
+            <div class="flip-card">
+                <div class="inner">
+                    <div class="front">
+                        <img src="#" alt="Avatar" style="width:50%;">
+                    </div>
+                    <div class="back">
+                        <h1>AFTAB</h1>
+                        <span class="fa fa-star checked">NOTHING TO WRITE</span>
+                        <span class="fa fa-star checked">NOTHING TO WRITE</span>
+                        <span class="fa fa-star checked">NOTHING TO WRITE</span>
+                        <span class="fa fa-star checked">NOTHING TO WRITE</span>
+                        <span class="fa fa-star checked">NOTHING TO WRITE</span>
+                        <p>Review: <i class="fa fa-quote-left" aria-hidden="true">mast padhate hai</i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="flip-card">
+            <div class="inner">
+                <div class="front">
+                    <img src="#" alt="Avatar" style="width:50%;">
+                </div>
+                <div class="back">
+                    <h1>RAJA</h1>
+                    <span class="fa fa-star checked">NOTHING TO WRITE</span>
+                    <span class="fa fa-star checked">NOTHING TO WRITE</span>
+                    <span class="fa fa-star checked">NOTHING TO WRITE</span>
+                    <span class="fa fa-star checked">NOTHING TO WRITE</span>
+                    <span class="fa fa-star checked">NOTHING TO WRITE</span>
+                    <p>Review: <i class="fa fa-quote-left" aria-hidden="true">acha padhate h</i>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="flip-card">
+            <div class="inner">
+                <div class="front">
+                    <img src="#" alt="Avatar" style="width:50%;">
+                </div>
+                <div class="back">
+                    <h1>*****</h1>
+                    <span class="fa fa-star checked">NOTHING TO WRITE</span>
+                    <span class="fa fa-star checked">NOTHING TO WRITE</span>
+                    <span class="fa fa-star checked">NOTHING TO WRITE</span>
+                    <span class="fa fa-star checked">NOTHING TO WRITE</span>
+                    <span class="fa fa-star checked">NOTHING TO WRITE</span>
+                    <p>Review: <i class="fa fa-quote-left" aria-hidden="true">padhati hi nhi h</i>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+
+    </section>
+
+    <section style="margin-top: 28%;" id="last" class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                    class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
+                    <path
+                        d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+                    </path>
+                </svg>
+                <p class="leading-relaxed text-lg">I would also like to thank my parents and my teacher for their kind
+                    cooperations and encouragement which helped me in this project <br> <br> I am grateful to my project
+                    guide <b>Mr. K.L. Deshmukh</b> - ATL Incharge <b>Mr. Aftab Alam</b> (I.T. Teacher) and <b>Mr. S.S.
+                        Raja</b> (I.T. Teacher) <br> (BNS DAV PUBLIC SCHOOL) <br>Thanks For Reading!
+                </p>
+                <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
+                <h2 style="color: white;" class="text-gray-900 font-medium title-font tracking-wider text-sm">ASHUTOSH
+                    SHARMA</h2>
+                <p class="text-gray-500">Developer | Designer | Coder</p>
             </div>
         </div>
     </section>
